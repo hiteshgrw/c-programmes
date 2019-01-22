@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+void main() 
+{
+  int n, data[100], i, j, temp;
+  clrscr();
+  printf("Enter your input for n:");
+  scanf("%d", &n);
+  printf("\n ENTER ELEMENTS IN THE ARRAY :");
+  for (i = 0; i < n; i++)
+      {
+        scanf("%d", &data[i]);
+      }
+  for (i = 0; i < n-1; i++) {
+     for (j = i + 1; j < n; j++) {
+          if (data[i] > data[j]) {
+                   temp = data[i];
+                   data[i] = data[j];
+                   data[j] = temp;
+                 }
+     }
+  }
+  printf("Ascending Order:\n");
+  for (i = 0; i < n; i++)
+     printf("%d\n", data[i]);
+  getch();
+}
